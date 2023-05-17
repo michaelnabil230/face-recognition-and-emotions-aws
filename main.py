@@ -91,7 +91,7 @@ def analyze_emotions(source_file):
     with open(source_file, 'rb') as target_image:
         response = rekognition_client.detect_faces(
             Image={'Bytes': target_image.read()},
-            Attributes=['ALL']
+            Attributes=['EMOTIONS']
         )
 
     response = response['FaceDetails'][0]
