@@ -76,6 +76,8 @@ def compare_faces(source_file, target_file):
             SourceImage={'Bytes': source_image.read()},
             TargetImage={'Bytes': target_image.read()}
         )
+    
+    st.write(response)
 
     face_matches = response['FaceMatches']
     st.text("Face matches: " + str(len(face_matches)))
